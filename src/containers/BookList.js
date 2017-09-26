@@ -4,7 +4,6 @@ import { selectBook }  from '../actions/index';
 //make sure action created flows through all reducers
 import { bindActionCreators } from 'redux';
 import BookDetail from './BookDetail';
-import bookList from '../data/books';
 
 
 
@@ -17,12 +16,12 @@ class BookList extends Component {
     return (
       <div>
         <ul className="list-group col-sm-4">
-          {books.map(book => {
+          {books.map(book => (
             <li
             key={book.id}
             onClick={() => this.props.selectBook(book)}
             className="list-group-item">{book.title}</li>
-                })
+            ))
               }
         </ul>
       </div>
