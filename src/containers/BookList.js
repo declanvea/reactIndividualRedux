@@ -4,6 +4,7 @@ import { selectBook }  from '../actions/index';
 //make sure action created flows through all reducers
 import { bindActionCreators } from 'redux';
 import BookDetail from './BookDetail';
+import bookList from '../data/books';
 
 
 
